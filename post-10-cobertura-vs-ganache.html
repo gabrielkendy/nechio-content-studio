@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post 10 - Cobertura vs Ganache | NECHIO</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#6B2D5B;--verde:#7AB930;--dourado:#F5A623;--escuro:#1a1a2e}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Space Grotesk',sans-serif;background:var(--escuro);color:#fff;padding:40px 20px;line-height:1.7}.container{max-width:900px;margin:0 auto}.back{color:var(--verde);text-decoration:none;display:inline-block;margin-bottom:30px;font-size:14px}.badge{background:rgba(245,166,35,0.2);color:var(--dourado);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;display:inline-block;margin-bottom:15px}.post-num{font-size:80px;font-weight:700;color:var(--dourado);opacity:0.3;line-height:1}h1{font-size:32px;color:var(--dourado);margin-bottom:10px}.desc{color:rgba(255,255,255,0.6);margin-bottom:30px}.info-box{background:rgba(245,166,35,0.1);border-left:4px solid var(--dourado);padding:20px;border-radius:0 12px 12px 0;margin-bottom:40px}.info-box p{margin:5px 0}.info-box strong{color:var(--dourado)}.section{margin-bottom:50px}.section-title{font-size:22px;font-weight:600;margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1)}.take{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:25px;margin-bottom:20px}.take-header{display:flex;align-items:center;gap:15px;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1)}.take-num{width:40px;height:40px;background:linear-gradient(135deg,var(--dourado),var(--verde));border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--escuro)}.take-title{font-size:16px;font-weight:600;color:var(--dourado);flex:1}.take-time{font-size:12px;color:rgba(255,255,255,0.4)}.content-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:20px}@media(max-width:600px){.content-grid{grid-template-columns:1fr}}.content-box{background:rgba(0,0,0,0.3);padding:15px;border-radius:10px}.content-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}.content-label.narracao{color:var(--dourado)}.content-label.tela{color:#00D4FF}.content-text{font-size:14px;white-space:pre-wrap}.prompt-box{background:rgba(107,45,91,0.2);border:1px solid rgba(107,45,91,0.4);border-radius:10px;padding:15px;margin-top:15px}.prompt-label{color:var(--verde);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}.prompt-text{font-family:monospace;font-size:11px;line-height:1.8;color:rgba(255,255,255,0.85);white-space:pre-wrap}.caption-box{background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);border-radius:16px;padding:25px}.caption-label{color:var(--dourado);font-size:12px;font-weight:600;margin-bottom:15px}.caption-text{font-size:14px;white-space:pre-wrap;line-height:1.9}.nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1)}.nav a{background:var(--roxo);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-size:14px}.nav a:hover{background:var(--dourado);color:var(--escuro)}
+.copy-section{margin-bottom:30px}
+.copy-title{font-size:18px;font-weight:600;margin-bottom:15px;padding:12px 15px;background:rgba(245,166,35,0.15);border-radius:8px;color:var(--dourado)}
+.copy-box{background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:20px;margin-bottom:15px}
+.copy-box.prompt{border-left:3px solid var(--roxo)}
+.copy-label{font-size:11px;font-weight:600;color:var(--verde);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.copy-text{font-size:13px;line-height:1.9;white-space:pre-wrap;font-family:'Space Grotesk',monospace;color:rgba(255,255,255,0.9)}
+.copy-box.prompt .copy-text{font-size:11px;line-height:1.7;color:rgba(255,255,255,0.8)}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back">← Voltar ao Dashboard</a>
+<span class="badge">EDUCATIVO ★★★★★</span>
+<div class="post-num">10</div>
+<h1>Cobertura vs Ganache: Qual Usar?</h1>
+<p class="desc">Usando errado você ESTRAGA o doce!</p>
+
+<div class="info-box">
+<p><strong>📦 PRODUTO:</strong> Cobertura Du Porto + Chocotruffa Doremus</p>
+<p><strong>🏷️ CÓDIGO:</strong> COMPARATIVO</p>
+<p><strong>🎯 PÚBLICO:</strong> Confeiteiros, doceiras, padarias</p>
+<p><strong>⏱️ FORMATO:</strong> Reels 30-35 segundos</p>
+</div>
+
+<section class="section">
+<h2 class="section-title">🎬 Takes do Vídeo</h2>
+
+<div class="take">
+<div class="take-header"><div class="take-num">1</div><div class="take-title">HOOK ERRO</div><div class="take-time">⏱️ 0-3s</div></div>
+<div class="content-grid">
+<div class="content-box"><div class="content-label narracao">🎙️ NARRAÇÃO</div><div class="content-text">"Você tá usando ERRADO e estragando seu doce! Cobertura e ganache NÃO são a mesma coisa!"</div></div>
+<div class="content-box"><div class="content-label tela">📺 TEXTO NA TELA</div><div class="content-text">TÁ USANDO ERRADO!
+COBERTURA ≠ GANACHE 😱</div></div>
+</div>
+<div class="prompt-box"><div class="prompt-label">🎨 PROMPT DE IMAGEM</div>
+<div class="prompt-text">Split image showing WRONG use: left ganache being used where coating should be (melting mess), right coating used where ganache should be (hard crusty layer on cake).
+
+COMPOSITION: Side-by-side showing mistakes. Left: ganache melting off truffle (wrong application). Right: coating making cake hard and unappetizing (wrong application). Both marked with X showing problems.
+
+LIGHTING: Dramatic lighting emphasizing the problems.
+
+TECHNICAL: 8K resolution, educational mistake demonstration.
+
+Aspect ratio: 9:16</div></div>
+</div>
+
+<div class="take">
+<div class="take-header"><div class="take-num">2</div><div class="take-title">COBERTURA</div><div class="take-time">⏱️ 3-10s</div></div>
+<div class="content-grid">
+<div class="content-box"><div class="content-label narracao">🎙️ NARRAÇÃO</div><div class="content-text">"COBERTURA: Líquida quando aquecida, SECA RÁPIDO, forma casca CROCANTE! Ideal pra bombons, palitos, casquinha!"</div></div>
+<div class="content-box"><div class="content-label tela">📺 TEXTO NA TELA</div><div class="content-text">COBERTURA:
+✓ SECA RÁPIDO
+✓ CASCA CROCANTE
+→ BOMBOM, PALITO</div></div>
+</div>
+<div class="prompt-box"><div class="prompt-label">🎨 PROMPT DE IMAGEM</div>
+<div class="prompt-text">Demonstration of coating behavior: liquid chocolate coating being drizzled over truffle stick, showing it setting into shiny hard shell.
+
+COMPOSITION: Coating in action - liquid drizzle onto truffle, visible setting process into hard glossy shell. Du Porto container visible. Time-lapse feel showing liquid→solid transformation.
+
+LIGHTING: Dark elegant background, dramatic product spotlight.
+
+TECHNICAL: 8K resolution, showing coating properties clearly.
+
+Aspect ratio: 9:16</div></div>
+</div>
+
+<div class="take">
+<div class="take-header"><div class="take-num">3</div><div class="take-title">GANACHE</div><div class="take-time">⏱️ 10-17s</div></div>
+<div class="content-grid">
+<div class="content-box"><div class="content-label narracao">🎙️ NARRAÇÃO</div><div class="content-text">"GANACHE: Cremosa SEMPRE, NÃO seca, derrete na boca! Ideal pra recheio, cobertura de bolo, trufa!"</div></div>
+<div class="content-box"><div class="content-label tela">📺 TEXTO NA TELA</div><div class="content-text">GANACHE:
+✓ CREMOSA SEMPRE
+✓ DERRETE NA BOCA
+→ RECHEIO, BOLO</div></div>
+</div>
+<div class="prompt-box"><div class="prompt-label">🎨 PROMPT DE IMAGEM</div>
+<div class="prompt-text">Demonstration of ganache behavior: spoon lifting creamy ganache dripping back down STAYING SOFT, cake slice with ganache layer showing creamy interior when cut.
+
+COMPOSITION: Ganache demonstration - soft, creamy, staying soft even after time. Chocotruffa container visible. Cake slice showing ganache layer remaining creamy.
+
+LIGHTING: Matching style to previous for fair comparison.
+
+TECHNICAL: 8K resolution, showing ganache properties clearly.
+
+Aspect ratio: 9:16</div></div>
+</div>
+
+<div class="take">
+<div class="take-header"><div class="take-num">4</div><div class="take-title">RESUMO + CTA</div><div class="take-time">⏱️ 17-28s</div></div>
+<div class="content-grid">
+<div class="content-box"><div class="content-label narracao">🎙️ NARRAÇÃO</div><div class="content-text">"Quer casca crocante? COBERTURA! Quer cremoso que derrete? GANACHE! Os dois na Nechio! Chama no WhatsApp!"</div></div>
+<div class="content-box"><div class="content-label tela">📺 TEXTO NA TELA</div><div class="content-text">RESUMO:
+CARA CROCANTE → COBERTURA
+CREMOSO → GANACHE
+
+📲 WHATSAPP NECHIO</div></div>
+</div>
+<div class="prompt-box"><div class="prompt-label">🎨 PROMPT DE IMAGEM</div>
+<div class="prompt-text">Clean infographic comparing COBERTURA vs GANACHE with both products shown and Nechio branding.
+
+COMPOSITION: Infographic style - left column COBERTURA with hard shell icon and products (bombom, palito), right column GANACHE with soft drip icon and products (recheio, bolo). Both containers shown. Nechio logo.
+
+LIGHTING: Clean product photography.
+
+TECHNICAL: 8K resolution, infographic clarity.
+
+Aspect ratio: 9:16</div></div>
+</div>
+
+</section>
+
+<section class="section">
+<h2 class="section-title">📋 COPIAR E COLAR</h2>
+
+<div class="copy-section">
+<h3 class="copy-title">🎙️ NARRAÇÃO COMPLETA</h3>
+<div class="copy-box">
+<div class="copy-text">[TAKE 1] "Você tá usando ERRADO e estragando seu doce! Cobertura e ganache NÃO são a mesma coisa!"
+
+[TAKE 2] "COBERTURA: Líquida quando aquecida, SECA RÁPIDO, forma casca CROCANTE! Ideal pra bombons, palitos!"
+
+[TAKE 3] "GANACHE: Cremosa SEMPRE, NÃO seca, derrete na boca! Ideal pra recheio, cobertura de bolo, trufa!"
+
+[TAKE 4] "Quer casca crocante? COBERTURA! Quer cremoso que derrete? GANACHE! Os dois na Nechio!"</div>
+</div>
+</div>
+
+<div class="copy-section">
+<h3 class="copy-title">📺 TEXTOS NA TELA</h3>
+<div class="copy-box">
+<div class="copy-text">[TAKE 1]
+TÁ USANDO ERRADO!
+COBERTURA ≠ GANACHE 😱
+
+[TAKE 2]
+COBERTURA:
+✓ SECA RÁPIDO ✓ CASCA CROCANTE
+→ BOMBOM, PALITO
+
+[TAKE 3]
+GANACHE:
+✓ CREMOSA SEMPRE ✓ DERRETE NA BOCA
+→ RECHEIO, BOLO
+
+[TAKE 4]
+RESUMO:
+CASCA CROCANTE → COBERTURA
+CREMOSO → GANACHE
+📲 WHATSAPP NECHIO</div>
+</div>
+</div>
+
+<div class="copy-section">
+<h3 class="copy-title">🎨 PROMPTS DE IMAGEM</h3>
+
+<div class="copy-box prompt">
+<div class="copy-label">TAKE 1 - HOOK ERRO</div>
+<div class="copy-text">Split image showing WRONG use: left ganache being used where coating should be (melting mess), right coating used where ganache should be (hard crusty layer on cake). COMPOSITION: Side-by-side showing mistakes. Both marked with X showing problems. LIGHTING: Dramatic lighting emphasizing the problems. TECHNICAL: 8K resolution, educational mistake demonstration. Aspect ratio: 9:16</div>
+</div>
+
+<div class="copy-box prompt">
+<div class="copy-label">TAKE 2 - COBERTURA</div>
+<div class="copy-text">Demonstration of coating behavior: liquid chocolate coating being drizzled over truffle stick, showing it setting into shiny hard shell. COMPOSITION: Coating in action - liquid drizzle onto truffle, visible setting process into hard glossy shell. Du Porto container visible. LIGHTING: Dark elegant background, dramatic product spotlight. TECHNICAL: 8K resolution. Aspect ratio: 9:16</div>
+</div>
+
+<div class="copy-box prompt">
+<div class="copy-label">TAKE 3 - GANACHE</div>
+<div class="copy-text">Demonstration of ganache behavior: spoon lifting creamy ganache dripping back down STAYING SOFT, cake slice with ganache layer showing creamy interior when cut. COMPOSITION: Ganache demonstration - soft, creamy, staying soft. Chocotruffa container visible. LIGHTING: Matching style to previous for fair comparison. TECHNICAL: 8K resolution. Aspect ratio: 9:16</div>
+</div>
+
+<div class="copy-box prompt">
+<div class="copy-label">TAKE 4 - RESUMO</div>
+<div class="copy-text">Clean infographic comparing COBERTURA vs GANACHE with both products shown and Nechio branding. COMPOSITION: Infographic style - left column COBERTURA with hard shell icon, right column GANACHE with soft drip icon. Both containers shown. Nechio logo. LIGHTING: Clean product photography. TECHNICAL: 8K resolution, infographic clarity. Aspect ratio: 9:16</div>
+</div>
+</div>
+
+<div class="copy-section">
+<h3 class="copy-title">📱 LEGENDA INSTAGRAM</h3>
+<div class="copy-box">
+<div class="copy-text">Você tá usando ERRADO! 😱
+
+Cobertura e ganache NÃO são a mesma coisa!
+
+🍫 COBERTURA:
+→ Seca RÁPIDO → Casca CROCANTE
+→ Ideal: bombons, palitos, casquinha
+
+🍫 GANACHE:
+→ Cremosa SEMPRE → Derrete na boca
+→ Ideal: recheio, bolo, trufa
+
+RESUMINDO:
+Quer casca crocante? → COBERTURA
+Quer cremoso? → GANACHE
+
+📌 SALVA pra não errar!
+
+📲 Os dois na Nechio — WhatsApp!
+📍 CEASA-RJ
+
+#confeitaria #cobertura #ganache #chocolate #dica #nechio #cesarj</div>
+</div>
+</div>
+
+</section>
+
+<div class="nav">
+<a href="post-09-segredo-acai-cremoso.html">← Post Anterior</a>
+<a href="post-11-leite-po-vs-composto.html">Próximo Post →</a>
+</div>
+</div>
+</body>
+</html>

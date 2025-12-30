@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🍇 NECHIO Content Studio V2 - 12 Posts Completos</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#6B2D5B;--verde:#7AB930;--dourado:#F5A623;--branco:#fff;--escuro:#1a1a2e;--vermelho:#E63946}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Space Grotesk',sans-serif;background:var(--escuro);color:var(--branco);line-height:1.6;min-height:100vh}
+.container{max-width:1200px;margin:0 auto;padding:40px 20px}
+.dashboard{display:block}
+.header{text-align:center;margin-bottom:50px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.logo{font-size:48px;margin-bottom:10px}
+.header h1{font-size:36px;font-weight:700;color:var(--verde);margin-bottom:10px}
+.subtitle{color:rgba(255,255,255,0.6);font-size:18px}
+.version-badge{display:inline-block;background:var(--vermelho);color:white;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-left:10px}
+.stats{display:flex;justify-content:center;gap:40px;margin-top:30px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-size:48px;font-weight:700;color:var(--dourado)}
+.stat-label{font-size:14px;color:rgba(255,255,255,0.5);text-transform:uppercase}
+.section-title{font-size:24px;font-weight:600;margin:40px 0 20px;padding-bottom:10px;border-bottom:2px solid var(--roxo)}
+.section-title span{color:var(--verde)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:25px;transition:all 0.3s;cursor:pointer}
+.card:hover{transform:translateY(-5px);border-color:var(--verde);box-shadow:0 10px 30px rgba(122,185,48,0.2)}
+.card-header{display:flex;align-items:center;gap:15px;margin-bottom:15px}
+.card-num{width:50px;height:50px;background:var(--roxo);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex-shrink:0}
+.card-num.edu{background:var(--dourado);color:var(--escuro)}
+.card-title{font-size:17px;font-weight:600;color:var(--branco);flex:1}
+.card-badge{font-size:10px;background:rgba(122,185,48,0.2);color:var(--verde);padding:4px 10px;border-radius:12px;text-transform:uppercase;flex-shrink:0}
+.card-badge.edu{background:rgba(245,166,35,0.2);color:var(--dourado)}
+.card-desc{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:15px}
+.card-product{font-size:12px;color:var(--verde);background:rgba(122,185,48,0.1);padding:8px 12px;border-radius:8px}
+.post-view{display:none;max-width:1100px;margin:0 auto}
+.back-btn{display:inline-flex;align-items:center;gap:8px;color:var(--verde);font-size:14px;margin-bottom:30px;cursor:pointer;opacity:0.8;transition:opacity 0.3s;background:none;border:none;font-family:inherit}
+.back-btn:hover{opacity:1}
+.post-header{margin-bottom:40px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.badge{display:inline-block;background:rgba(122,185,48,0.2);color:var(--verde);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:15px}
+.badge.edu{background:rgba(245,166,35,0.2);color:var(--dourado)}
+.number{font-size:80px;font-weight:700;color:var(--roxo);opacity:0.3;line-height:1;margin-bottom:-20px}
+.post-header h1{font-family:'Libre Bodoni',serif;font-size:36px;font-weight:700;margin-bottom:10px;color:var(--verde)}
+.desc{font-size:16px;color:rgba(255,255,255,0.6)}
+.product-info{background:rgba(122,185,48,0.1);border-left:4px solid var(--verde);padding:15px 20px;margin-bottom:30px;border-radius:0 8px 8px 0}
+.product-info.edu{background:rgba(245,166,35,0.1);border-left-color:var(--dourado)}
+.product-info strong{color:var(--verde)}
+.product-info.edu strong{color:var(--dourado)}
+.section{margin-bottom:50px}
+.sec-title{display:flex;align-items:center;gap:12px;margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.sec-icon{width:40px;height:40px;background:var(--roxo);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.sec-title h2{font-family:'Libre Bodoni',serif;font-size:24px;font-weight:700}
+.take-block{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:30px;margin-bottom:25px}
+.take-header{display:flex;align-items:center;gap:15px;margin-bottom:20px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.take-num{width:45px;height:45px;background:linear-gradient(135deg, var(--roxo), var(--verde));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700}
+.take-title{font-size:18px;font-weight:600;color:var(--verde)}
+.take-time{font-size:12px;color:rgba(255,255,255,0.4);margin-left:auto}
+.content-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+@media(max-width:768px){.content-row{grid-template-columns:1fr}}
+.content-box{background:rgba(0,0,0,0.3);border-radius:12px;padding:20px}
+.content-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.content-label.narracao{color:var(--dourado)}
+.content-label.tela{color:#00D4FF}
+.content-text{font-size:15px;line-height:1.8;white-space:pre-wrap}
+.prompt-box{background:rgba(107,45,91,0.25);border:1px solid rgba(107,45,91,0.5);border-radius:12px;padding:20px;margin-top:15px}
+.prompt-label{color:var(--verde);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.prompt-text{font-family:'Consolas','Monaco',monospace;font-size:12px;line-height:1.9;color:rgba(255,255,255,0.85);white-space:pre-wrap}
+.caption-block{background:rgba(122,185,48,0.1);border:1px solid rgba(122,185,48,0.3);border-radius:16px;padding:30px}
+.caption-label{color:var(--verde);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:15px}
+.caption-text{font-size:15px;line-height:1.9;white-space:pre-wrap}
+.footer{text-align:center;padding:40px 0;border-top:1px solid rgba(255,255,255,0.1);margin-top:50px;color:rgba(255,255,255,0.4);font-size:13px}
+.nav-buttons{display:flex;justify-content:space-between;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.1)}
+.nav-btn{background:var(--roxo);color:var(--branco);border:none;padding:12px 24px;border-radius:8px;cursor:pointer;font-family:inherit;font-size:14px;transition:all 0.3s}
+.nav-btn:hover{background:var(--verde)}
+.nav-btn:disabled{opacity:0.3;cursor:not-allowed}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="dashboard" id="dashboard">
+<header class="header">
+<div class="logo">🍇</div>
+<h1>NECHIO Content Studio <span class="version-badge">V2.0</span></h1>
+<p class="subtitle">12 Posts Completos — Narração + Texto na Tela + Prompts de Imagem + Legenda</p>
+<div class="stats">
+<div class="stat"><div class="stat-num">12</div><div class="stat-label">Posts</div></div>
+<div class="stat"><div class="stat-num">6</div><div class="stat-label">Produtos</div></div>
+<div class="stat"><div class="stat-num">6</div><div class="stat-label">Educativos</div></div>
+</div>
+</header>
+<h2 class="section-title">📦 <span>Posts de Produtos</span> (1-6)</h2>
+<div class="grid">
+<div class="card" onclick="showPost(1)"><div class="card-header"><div class="card-num">01</div><div class="card-title">Esse Sorvete PINTA a Língua de AZUL!</div><span class="card-badge">Viral</span></div><p class="card-desc">Produto que viraliza: crianças amam, mães postam, fila forma!</p><div class="card-product">📦 Algemix Blue Ice 1kg (CÓD: 3673)</div></div>
+<div class="card" onclick="showPost(2)"><div class="card-header"><div class="card-num">02</div><div class="card-title">Coxinha de FRANGO... Sem Frango?!</div><span class="card-badge">Polêmico</span></div><p class="card-desc">7 de 10 pessoas não perceberam diferença no teste cego!</p><div class="card-product">📦 Coxinha Vegana N.Ovo 1kg (CÓD: 4333)</div></div>
+<div class="card" onclick="showPost(3)"><div class="card-header"><div class="card-num">03</div><div class="card-title">O Recheio que TODO MUNDO Pergunta</div><span class="card-badge">Revelação</span></div><p class="card-desc">KitKat e Kinder Bueno em versão profissional!</p><div class="card-product">📦 KitKat Nestlé + Bueno Vabene</div></div>
+<div class="card" onclick="showPost(4)"><div class="card-header"><div class="card-num">04</div><div class="card-title">Batata ROSTI em 3 MINUTOS?!</div><span class="card-badge">Praticidade</span></div><p class="card-desc">Do freezer direto pra fritadeira. Crocante sempre!</p><div class="card-product">📦 Mini Hash Brown 1,06kg (CÓD: 5109)</div></div>
+<div class="card" onclick="showPost(5)"><div class="card-header"><div class="card-num">05</div><div class="card-title">Paçoca... mas CREMOSA?!</div><span class="card-badge">Brasileiro</span></div><p class="card-desc">O sabor que brasileiro ama, versão profissional!</p><div class="card-product">📦 Creme de Paçoca Doremus 1,01kg</div></div>
+<div class="card" onclick="showPost(6)"><div class="card-header"><div class="card-num">06</div><div class="card-title">ESSE Preparado Transforma TUDO!</div><span class="card-badge">Premium</span></div><p class="card-desc">Sobremesa simples vira gourmet em segundos!</p><div class="card-product">📦 Preparado Frutas Vermelhas JEB 4,1kg</div></div>
+</div>
+<h2 class="section-title">📚 <span>Posts Educativos</span> (7-12)</h2>
+<div class="grid">
+<div class="card" onclick="showPost(7)"><div class="card-header"><div class="card-num edu">07</div><div class="card-title">O SEGREDO do Sorvete Leite Ninho</div><span class="card-badge edu">Segredo</span></div><p class="card-desc">Por que o seu não fica igual? Eu vou te contar!</p><div class="card-product">📦 Creme de Leitinho Specialitá 3kg</div></div>
+<div class="card" onclick="showPost(8)"><div class="card-header"><div class="card-num edu">08</div><div class="card-title">4 Produtos que a INDÚSTRIA Esconde</div><span class="card-badge edu">Série</span></div><p class="card-desc">Por isso o sorvete deles é diferente do seu!</p><div class="card-product">📦 Realçador + Liga + Emustab + Neutro</div></div>
+<div class="card" onclick="showPost(9)"><div class="card-header"><div class="card-num edu">09</div><div class="card-title">Por que seu Açaí é AGUADO?</div><span class="card-badge edu">Segredo</span></div><p class="card-desc">O açaí da açaiteria é diferente por um motivo!</p><div class="card-product">📦 FBF Açaí Creme + Doremax Açaí</div></div>
+<div class="card" onclick="showPost(10)"><div class="card-header"><div class="card-num edu">10</div><div class="card-title">Cobertura vs Ganache: Qual Usar?</div><span class="card-badge edu">Educativo</span></div><p class="card-desc">Usando errado você ESTRAGA o doce!</p><div class="card-product">📦 Cobertura + Chocotruffa</div></div>
+<div class="card" onclick="showPost(11)"><div class="card-header"><div class="card-num edu">11</div><div class="card-title">MITO: Leite em Pó vs Composto</div><span class="card-badge edu">Mito</span></div><p class="card-desc">Você ACHA que tá comprando leite... mas não tá!</p><div class="card-product">📦 Leite em Pó Integral</div></div>
+<div class="card" onclick="showPost(12)"><div class="card-header"><div class="card-num edu">12</div><div class="card-title">MITO: "Só Nutella Presta"</div><span class="card-badge edu">Mito</span></div><p class="card-desc">12 de 20 pessoas preferiram DORELLA no teste cego!</p><div class="card-product">📦 Dorella 4kg Doremus (CÓD: 1070)</div></div>
+</div>
+<footer class="footer">🍇 NECHIO CONGELADOS © 2025 — Content Studio V2.0<br>CEASA-RJ | 22 anos abastecendo o Rio de Janeiro</footer>
+</div>
+<div class="post-view" id="postView">
+<button class="back-btn" onclick="showDashboard()">← Voltar ao Dashboard</button>
+<div id="postContent"></div>
+<div class="nav-buttons">
+<button class="nav-btn" id="prevBtn" onclick="prevPost()">← Post Anterior</button>
+<button class="nav-btn" id="nextBtn" onclick="nextPost()">Próximo Post →</button>
+</div>
+</div>
+</div>
+<script>
+let currentPost = 0;
+const posts = [null,
